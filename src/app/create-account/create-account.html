@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #6dd5ed, #2193b0);
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      border-radius: 12px;
+    }
+    .card-header {
+      background-color: #28a745;
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .btn-custom {
+      background-color: #ff9800;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    .btn-custom:hover {
+      background-color: #e68900;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        
+        <!-- Card Header -->
+        <div class="card-header">
+          Create a New Account
+        </div>
+        
+        <!-- Card Body -->
+        <div class="card-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Pin</label>
+                <input type="text" class="form-control" name="pin" #pin placeholder="Enter PIN">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name" #name placeholder="Enter Full Name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Father's Name</label>
+                <input type="text" class="form-control" name="fname" #fname placeholder="Enter Father's Name">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="email" class="form-control" name="email" #email placeholder="Enter Email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" name="phone" #phone placeholder="Enter Phone Number">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Gender</label>
+                <select class="form-control" name="gender" #gender>
+                  <option selected disabled>Choose...</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Country</label>
+                <input type="text" class="form-control" name="country" #country placeholder="Enter Country">
+              </div>
+              <div class="form-group col-md-6">
+                <label>State</label>
+                <input type="text" class="form-control" name="state" #state placeholder="Enter State">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>City</label>
+                <input type="text" class="form-control" name="city" #city placeholder="Enter City">
+              </div>
+              <div class="form-group col-md-6">
+                <label>Amount</label>
+                <input type="text" class="form-control" name="amount" #amount placeholder="Enter Amount">
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+              <input type="button" 
+                class="btn btn-custom px-4 py-2"
+                value="Create Account" 
+                (click)="cAccount(pin.value,name.value,fname.value,email.value,gender.value,phone.value,country.value,state.value,city.value,amount.value)">
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

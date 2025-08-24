@@ -1,0 +1,36 @@
+
+
+<div class="container">
+  <h1 style="text-align: center; background-color: chocolate;">Welcome To Withdraw Page</h1>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+        <div class="col-md-8">
+                <div class="alert alert-success" role="alert">
+  {{msg}}
+</div>
+
+      Enter Accoount no:
+      <input type="text" class="form-control" #an><br>
+
+      Enter Pin:
+      <input type="text" class="form-control" #ap><br>
+
+      Enter Amount:
+      <input type="text" class="form-control" #am><br>
+
+      <input type="button" value="Withdraw" class="btn btn-success" (click)="getwithdraw(an.value, ap.value, am.value)">
+
+      <br><br>
+
+  
+     
+    
+    </div>
+
+    <div class="col-md-4"></div>
+  </div>
+</div>

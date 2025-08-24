@@ -1,0 +1,60 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+  crossorigin="anonymous"
+/>
+<div class="container">
+  <h1 class="text-center my-4" style="background-color: rgb(66, 240, 141)">
+    fund Transfer 
+  </h1>
+  <hr />
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+       <div class="col-md-8">
+                <div class="alert alert-success" role="alert">
+  {{msg}}
+       
+                <div class="alert alert-success" role="alert">
+  {{msg2}}
+</div>
+    
+        <div style="border: 2px solid black">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Enter Sender's Account Number:</label>
+              <input type="text" class="form-control" #san />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Enter Pin:</label>
+              <input type="text" class="form-control" #pin />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Enter Reciver's Account Number</label>
+              <input type="text" class="form-control" #ran />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Enter Amount:</label>
+              <input type="text" class="form-control" #am />
+            </div>
+          </div>
+        </div>
+
+        <input
+          type="submit"
+          name="submit"
+          class="btn btn-warning"
+          value="Transfer Money"
+          (click)="getfundtransfer(san.value,pin.value,am.value,ran.value)"
+        />
+     
+    </div>
+  </div>
+</div>
